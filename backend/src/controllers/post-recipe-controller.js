@@ -3,6 +3,7 @@ const mysql = require("../database/mysql-pool");
 const postRecipeController = async (req, res) => {
     try {
         const { name, ingredients, instructions } = req.body;
+        const userId = req.user.id;
         if (!name || typeof name !== "string" || name.length > 40) {
             return res
                 .status(400)
@@ -21,9 +22,14 @@ const postRecipeController = async (req, res) => {
             );
         }
         const query =
-            "INSERT INTO recipes (name, ingredients, instructions) VALUES (?,?,?)";
+            "INSERT INTO recipes (name, ingredients, instructions, fk_user) VALUES (?,?,?,?)";
         const connection = await mysql.getConnection();
-        await connection.query(query, [name, ingredients, instructions]);
+        await connection.query(query, [
+            name,
+            ingredients,
+            instructions,
+            userId,
+        ]);
         res.status(201).json({
             message: "Receta creada",
         });

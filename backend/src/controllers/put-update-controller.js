@@ -3,6 +3,7 @@ const mysql = require("../database/mysql-pool");
 const putUpdateController = async (req, res) => {
     try {
         const { id } = req.params;
+        const userId = req.user.id;
         const { name, ingredients, instructions } = req.body;
         if (!id || isNaN(id) || Number(id) <= 0) {
             res.status(400).send(
@@ -25,13 +26,14 @@ const putUpdateController = async (req, res) => {
             );
         }
         const query =
-            "UPDATE recipes SET name = ?, ingredients = ?, instructions = ? WHERE id=?";
+            "UPDATE recipes SET name = ?, ingredients = ?, instructions = ? WHERE id=? AND fk_user=?";
         const connection = await mysql.getConnection();
         const data = await connection.query(query, [
             name,
             ingredients,
             instructions,
             id,
+            userId,
         ]);
         res.send("Receta actualizada");
     } catch {
