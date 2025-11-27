@@ -3,6 +3,7 @@ import { useState} from "react";
 import { useNavigate } from "react-router-dom";
 import { addRecipe } from "../services/api";
 import Header from "../components/Header";
+import cooking from "../images/cooking.png"
 
 const AddPage = () => {
     const [name, setName] = useState("");
@@ -28,9 +29,12 @@ const AddPage = () => {
     return (
         <>
             <Header/>
-            <p className="subtitle">Añade tu receta</p>
+            <h1 className="recipe-title">Añade tu receta</h1>
+            <div className="edit-container">
+            <img src={cooking} className="edit-chef"/>
             <label htmlFor="name">Nombre de la receta</label>
             <input 
+                className="input"
                 type="text"
                 id="name"
                 name="name"
@@ -40,6 +44,7 @@ const AddPage = () => {
             />
             <label htmlFor="ingredients">Ingredientes</label>
             <input 
+                className="t-ingred"
                 type="text" 
                 name="ingredients" 
                 id="ingredients"
@@ -48,15 +53,17 @@ const AddPage = () => {
             />
             <label htmlFor="instructions">Pasos a seguir</label>
             <textarea 
+                className="input t-area"
                 name="instructions"
                 id="instructions"
                 value={instructions}
                 onChange={handleChangeInstructions}
             />
             <button
-                className="submit-btn"
+                className="save"
                 onClick={handleSubmit}
             >Guardar receta</button>
+        </div>
         </>
 
     )

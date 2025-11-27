@@ -179,3 +179,37 @@
   font-weight: 600;
   color: rgba(161, 24, 24, 0.947);
 }
+
+.edit-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
+}
+.edit-chef{
+  width: 180px;
+  height: 200px;
+  align-self: center;
+}
+.input {
+  width: 300px;
+  padding: 10px;
+  align-self: center;
+}
+.t-area {
+  width: 600px;
+  height: 500px;
+  padding: 10px;
+}
+.save {
+  width: 180px;
+  align-self: center;
+  background-color: rgba(169, 164, 164, 0.705);;
+}
+.t-ingred {
+  width: 400px;
+  height: 250px;
+  align-self: center;
+  padding: 10px;
+}
