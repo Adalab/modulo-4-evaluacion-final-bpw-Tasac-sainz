@@ -53,55 +53,55 @@ const SignupPage = () => {
             <img className="cooking-login" src={Cooking}/>
         </div>
         <form className="login-form">
-            <div className="container-form">
                 <div className="user-container">
-                    <label htmlFor="name" className="login-label">Usuario</label>
-                    <input 
-                        type="text" 
-                        id="name" 
-                        name="name" 
-                        placeholder="usuario" 
-                        className="login-input"
-                        value= {user}
-                        onChange={handleChangeUser}
-                    />
+                    <div className="user-name">
+                        <label htmlFor="name" className="login-label">Usuario</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            placeholder="usuario" 
+                            className="login-input"
+                            value= {user}
+                            onChange={handleChangeUser}
+                        />
+                    </div>
+                    <div className="user-name" >
+                        <label htmlFor="mail" className="signup-label">Correo electrónico</label>
+                        <input
+                            type="text"
+                            id="mail"
+                            name="mail"
+                            placeholder="nombre@correo.com"
+                            className="login-input"
+                            value={email}
+                            onChange={handleChangeEmail}
+                        />
+                    </div>
+                    <div className="user-name" >
+                        <label htmlFor="password" className="login-label">Contraseña</label>
+                        <input 
+                            type={showPassword ? "text" : "password"} 
+                            id="password" 
+                            name="password" 
+                            placeholder="********" 
+                            className="login-input"
+                            value= {password}
+                            onChange={handleChangePassword}
+                        />
+                    </div>
+                    <div className="user-name" >
+                        <label htmlFor="confirmPassword">Repetir contraseña</label>
+                        <input
+                            id="confirmPassword"
+                            type="password"
+                            placeholder="••••••••"
+                            className="login-input"
+                            value={confirmPassword}
+                            onChange={handleChangeConfirmPassword}
+                        />
+                    </div>
                 </div>
-                <div className= "user-container">
-                    <label htmlFor="mail" className="signup-label">Correo electrónico</label>
-                    <input
-                        type="text"
-                        id="mail"
-                        name="mail"
-                        placeholder="nombre@correo.com"
-                        className="login-input"
-                        value={email}
-                        onChange={handleChangeEmail}
-                    />
-                </div>
-                <div className="pass-container">
-                    <label htmlFor="password" className="login-label">Contraseña</label>
-                    <input 
-                        type={showPassword ? "text" : "password"} 
-                        id="password" 
-                        name="password" 
-                        placeholder="********" 
-                        className="login-input"
-                        value= {password}
-                        onChange={handleChangePassword}
-                    />
-                </div>
-            </div>
-            <div className="pass-container">
-                <label htmlFor="confirmPassword">Repetir contraseña</label>
-                <input
-                    id="confirmPassword"
-                    type="password"
-                    placeholder="••••••••"
-                    className="login-input"
-                    value={confirmPassword}
-                    onChange={handleChangeConfirmPassword}
-                />
-            </div>
             <button  className="show-pass" onClick={handleChangeShowPassword}>{showPassword ? "Ocultar contraseña" : "Mostrar contraseña"}</button>
             <div className="submit-btn">
             <button className="login-btn" onClick={handleSubmit}>Entrar</button>

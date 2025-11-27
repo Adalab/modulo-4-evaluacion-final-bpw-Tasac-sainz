@@ -40,37 +40,23 @@
 .login-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   margin-top: 30px;
   gap: 10px;
   margin-bottom: 200px;
 }
-.container-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: center;
-}
+
 .user-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 60px;
+  text-align: center;
 }
-.pass-container {
+.user-name {
   display: flex;
   justify-content: center;
-  gap: 35px;
-  margin-bottom: 0;
-}
-.mail-container {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-}
-.repeat-mail-container {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
+  gap: 20px;
+  padding: 10px;
+
 }
 .login-label {
   align-self: center;
