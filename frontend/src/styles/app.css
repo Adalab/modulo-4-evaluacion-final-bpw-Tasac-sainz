@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+.header-nav {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  align-items: left;
+}
+.header-btn{
+  border: none;
+  background-color: white;
+}
+
+.title-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title-page {
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+  font-size: 75px;
+  text-align: center;
+  margin: 0;
+}
+
+.cooking {
+  width: 350px;
+  height: 400px;
+  align-self: center;
+}
+
+.cooking-login {
+  width: 200px;
+  height: 250px;
+  align-self: center;
+
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+  margin-bottom: 200px;
+}
+.container-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+.user-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+.pass-container {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-bottom: 0;
+}
+.mail-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+.repeat-mail-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.login-label {
+  align-self: center;
+}
+.login-input {
+  align-self: center;
+  width: 250px;
+}
+.login-btn {
+  background-color: rgba(169, 164, 164, 0.705);
+  align-self: center;
+  margin-top: 20px;
+}
+.submit-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.question {
+  text-align: center;
+}
+.a-signup{
+  color: #213547;
+  text-align: center;
+}
+.show-pass {
+  color: #213547;
+  font-size: 15px;
+  background-color: white;
+  width: 180px;
+  align-self: center;
+}
+
+.recipe-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+}
+
+.list-title {
+    font-family: "Caveat", cursive;
+    font-weight: 700;
+    font-size: 75px;
+    text-align: center;
+    margin: 0;
+}
+.recipe-list {
+    list-style: none;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    font-size: 25px;
+    padding: 0; 
+}
+.recipe-title {
+    font-family: "Caveat", cursive;
+    font-weight: 700;
+    font-size: 75px;
+    text-align: center;
+    margin: 0;
+    color: #646cff;
+}
+.one-recipe-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.img-recipe {
+    width: 150px;
+    height: 200px;
+    align-self: center;
+}
+.ingredients{
+    align-self: center;
+    list-style-type: square; 
+    line-height: 1.5;
+    font-family: "Caveat", cursive;
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.instructions {
+    align-self: center;
+    line-height: 1.5;
+    font-family: "Caveat", cursive;
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.subtitle {
+    text-align: center;
+    font-family: "Caveat";
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.email-container{
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+.error-text {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  color: rgba(161, 24, 24, 0.947);
+}
