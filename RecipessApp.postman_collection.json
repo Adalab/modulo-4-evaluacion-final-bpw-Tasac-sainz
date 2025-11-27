@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "9009c4ff-d8ce-4520-813a-d2719344c5ee",
+		"name": "RecipessApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50056046",
+		"_collection_link": "https://tssainzdeaja-797091.postman.co/workspace/Tania-S.-S's-Workspace~115613fc-d25d-4d35-87d2-289e40a06780/collection/50056046-9009c4ff-d8ce-4520-813a-d2719344c5ee?action=share&source=collection_link&creator=50056046"
+	},
+	"item": [
+		{
+			"name": "GET /recipes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzY0MTYwNjAwLCJleHAiOjE3NjQxNjQyMDB9.KBp56NSIsZlmIyW32hEMBEPxK-Gy1fKg4zoOd2LJFig",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/recipes",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recipes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /recipe",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzY0MTYwNjAwLCJleHAiOjE3NjQxNjQyMDB9.KBp56NSIsZlmIyW32hEMBEPxK-Gy1fKg4zoOd2LJFig",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/recipe/4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recipe",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /new-recipe",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzY0MTYwNjAwLCJleHAiOjE3NjQxNjQyMDB9.KBp56NSIsZlmIyW32hEMBEPxK-Gy1fKg4zoOd2LJFig",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Nata agria\",\n    \"ingredients\": \"500 gr de nata para montar, 30 gr de yogurt natural\",\n    \"instructions\": \"Echamos la nata en un tarro, echamos el yogurt y mezclamos. Dejar a temperatura ambiente (fuera de la nevera) de 24 a 36h y habrá fermentado, convirtiéndose en cream fresh o nata agria y  LISTO!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/new-recipe",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"new-recipe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /update-recipe",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzY0MTYwNjAwLCJleHAiOjE3NjQxNjQyMDB9.KBp56NSIsZlmIyW32hEMBEPxK-Gy1fKg4zoOd2LJFig",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"Quesadilla express con batata cocida\",\n        \"ingredients\": \"tortillas de trigo, jamón cocido o pavo, queso gouda y una batata\",\n        \"instructions\": \"calienta en una sarten a fuego medio la tortilla y añade el jamón y el queso, dobla la tortita y deja que se funda el queso. Dale la vuelta. Mientras, pela y corta en rodajas medianas la batata, mezcla con un poco de aceite y sal en un recipiente apto para microondas. Tapa con film transparente y haz algunos agujeros con un cuchillo en el film. Mete al microondas y cocina por 4 minutos. Listo!\",\n        \"deleted_at\": \"2025-11-26T08:47:39.000Z\",\n        \"fk_user\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/update-recipe/8",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"update-recipe",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH /delete-recipe/id",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/delete-recipe/8",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"delete-recipe",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_name\":\"tania\",\n    \"email\": \"tssainzdeaja@gmail.com\",\n    \"password\":\"123456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_name\":\"tania\",\n    \"password\":\"123456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
