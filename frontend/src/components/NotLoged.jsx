@@ -53,7 +53,7 @@ const NotLoged = () => {
                         onChange={handleChangeUser}
                     />
                 </div>
-                <div className="pass-container">
+                <div className="user-container">
                     <label htmlFor="password" className="login-label">Contraseña</label>
                     <input 
                         type={showPassword ? "text" : "password"} 
@@ -64,8 +64,8 @@ const NotLoged = () => {
                         value= {password}
                         onChange={handleChangePassword}
                     />
+                    <button  className="show-pass" onClick={handleChangeShowPassword}>{showPassword ? "Ocultar contraseña" : "Mostrar contraseña"}</button>
                 </div>
-            <button  className="show-pass" onClick={handleChangeShowPassword}>{showPassword ? "Ocultar contraseña" : "Mostrar contraseña"}</button>
             </div>
             <div className="submit-btn">
             <button className="login-btn" onClick={handleSubmit}>Entrar</button>
